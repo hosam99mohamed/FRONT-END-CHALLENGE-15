@@ -1,0 +1,195 @@
+* {
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Moderate--violet: hsl(263, 55%, 52%);
+    --Very--dark--grayish--blue: hsl(217, 19%, 35%);
+    --Very--dark--blackish--blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+/* ### Neutral */
+
+    --Light--gray: hsl(0, 0%, 81%);
+    --Light--grayish--blue: hsl(210, 46%, 95%);
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: var(--Light--grayish--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 1200px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+.person-1,
+.person-2,
+.person-3,
+.person-4,
+.person-5 {
+    border-radius: 10px;
+    padding: 30px;
+}
+.container .info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.container .info img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.container .info p:last-of-type {
+    color: hsl(0deg 0% 81% / 80%);
+    margin-top: 5px;
+}
+
+.person-1 {
+    grid-area: 1 / 1 / 2 / 3 ;
+    background-color: var(--Moderate--violet);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+}
+.person-1 .name-1 h3 {
+    color: var(--Light--grayish--blue);
+}
+.person-1 .content p:first-of-type {
+    margin-bottom: 20px;
+    color: var(--Light--grayish--blue);
+    font-size: 22px;
+}
+.person-1 .content p:last-of-type {
+    margin-bottom: 20px;
+    color: hsl(0deg 0% 81% / 50%);
+    font-size: 15px;
+}
+
+
+
+.person-2 {
+    grid-area: 1 / 3 / 2 / 4 ;
+    background-color: var(--Very--dark--grayish--blue);
+}
+.person-2 .name-2 h3 {
+    color: var(--Light--grayish--blue);
+}
+.person-2 .content p:first-of-type {
+    margin-bottom: 20px;
+    color: var(--Light--grayish--blue);
+    font-size: 23px;
+}
+.person-2 .content p:last-of-type {
+    font-size: 15px;
+    color: hsl(0deg 0% 81% / 70%);
+}
+
+
+.person-5 {
+    grid-area: 1 / 4 / 3 / 5 ;
+    background-color: var(--White);
+   
+}
+.person-5 .name-5 h3 {
+    color: var(--Very--dark--grayish--blue);
+}
+.person-5 .content p:first-of-type {
+    margin-bottom: 35px;
+    color: var(--Very--dark--blackish--blue);
+    font-size: 23px;
+}
+.person-5 .content p:last-of-type {
+    font-size: 15px;
+    color: var(--Very--dark--grayish--blue);
+    line-height: 1.3;
+    opacity: 0.7;
+}
+
+
+.person-3 {
+    grid-area: 2 / 1 / 3 / 2 ;
+    background-color: var(--White);
+}
+.person-3 .name-3 h3 {
+    color: var(--Very--dark--grayish--blue);
+}
+.person-3 .content p:first-of-type {
+    color: var(--Very--dark--blackish--blue);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.person-3 .content p:last-of-type {
+    font-size: 15px;
+    color: var(--Very--dark--grayish--blue);
+    opacity: 0.7;
+}
+
+
+.person-4 {
+    grid-area: 2 / 2 / 3 / 4 ;
+    background-color: var(--Very--dark--blackish--blue);
+}
+.person-4 .name-4 h3 {
+    color: var(--Light--grayish--blue);
+}
+.person-4 .content p:first-of-type {
+    color: var(--Light--gray);
+    margin-bottom: 25px;
+    font-size: 21px;
+}
+.person-4 .content p:last-of-type {
+    color: var(--Light--gray);
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+@media (max-width:376px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .person-1,
+    .person-2,
+    .person-3,
+    .person-4,
+    .person-5 {
+        width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .person-1 .info img,
+    .person-2 .info img,
+    .person-3 .info img,
+    .person-4 .info img,
+    .person-5 .info img {
+        width: 35px;
+        margin-right: 15px;
+    }
+    .person-1 .info img,
+    .person-4 .info img {
+        border: 2px solid hsl(263deg 100% 70.19%);
+    }
+    .person-1 .content p:first-of-type {
+        font-size: 25px;
+    }
+    .person-1 .content p:last-of-type {
+        font-size: 16px;
+    }
+    .person-4 .content p:last-of-type {
+        line-height: 1.5;
+    }
+    .person-5 .content p:last-of-type {
+        font-size: 16px;
+    }
+}
